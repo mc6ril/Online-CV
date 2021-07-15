@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 :root {
     --color1: #7286a0;
     --color2: #ecf0f1;
     --color3: #252627;
     --color4: #768948;
+    --color5: #1ea5ed;
 }
 * {
     margin: 0;
@@ -37,7 +37,7 @@ a:hover::after {
     transform: translate(-50%) scaleX(1);
 }
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: var(--color1);
     display: block;
     background-color: var(--color2);
@@ -60,6 +60,14 @@ h3 {
     text-decoration: underline;
     color: var(--color4);
     margin-bottom: 2em;
+}
+
+.fa-arrow-down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color4);
 }
 
 /*************** CONTENT ************/
@@ -119,10 +127,10 @@ header nav .menu li {
 /*************** WELCOME ************/
 #welcome {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
     gap: 20px;
     position: relative;
-    background: linear-gradient(to right top, var(--color2), var(--color1));
-    border: 1px solid var(--color1);
 }
 #welcome .content {
     display: flex;
@@ -202,17 +210,27 @@ header nav .menu li {
 }
 
 /*images*/
-#welcome .images {
-    width: 50%;
+#welcome .left_col {
+    width: 40%;
+    min-width: 300px;
+    height: 300px;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+#welcome .left_col .images {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 #welcome .images img {
-    min-width: 50%;
-    max-width: 60%;
-    width: 60%;
-    margin: 0 auto;
+    object-fit: cover;
+    height: 100%;
 }
 
 /************ EXPERIENCE ***************/
@@ -259,14 +277,6 @@ header nav .menu li {
     display: block;
     padding: 1em;
     line-height: 1.5em;
-}
-
-#experience .bloc .fa-arrow-down {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: var(--color4);
 }
 
 /************ FORMATION ****************/
@@ -331,7 +341,7 @@ header nav .menu li {
 }
 #skills .skills_list .skill_bloc {
     width: 17em;
-    height: 17em;
+    height: 19em;
     box-shadow: var(--color4);
     box-shadow: 0px 0px 6px 4px rgba(118, 137, 72, 0.2);
     padding: 1rem;
@@ -455,12 +465,6 @@ footer .copyright {
 }
 
 /************ RESPONSIVE ***************/
-@media screen and (max-width: 1300px) {
-    #welcome .images .me {
-        margin: 0 auto;
-        width: 50%;
-    }
-}
 
 @media screen and (max-width: 1000px) {
     body {
@@ -544,10 +548,6 @@ footer .copyright {
     }
     header .burger.active span::after {
         transform: translateY(0px) rotateZ(-45deg);
-    }
-    #welcome .images .me {
-        margin: 0 auto;
-        width: 40%;
     }
 }
 
