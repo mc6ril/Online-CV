@@ -306,6 +306,18 @@ header nav .menu li {
     font-weight: 500;
     color: var(--color3);
 }
+#formation .bloc .experience_short .experience_extended {
+    display: none;
+}
+#formation .bloc .experience_short .experience_extended li {
+    margin-bottom: 10px;
+}
+
+#formation .bloc .experience_short .experience_extended.show {
+    display: block;
+    padding: 1em;
+    line-height: 1.5em;
+}
 
 /************ SKILLS *******************/
 
